@@ -5,6 +5,7 @@ body {
 a {
   cursor: pointer;
 }
+
 .header-main {
   width: 100%;
   height: 60px;
@@ -13,35 +14,41 @@ a {
   justify-content: space-between;
 }
 
-.header-main-logo{
+.header-main-logo {
   width: fit-content;
   height: 100%;
   background-color: yellow;
   display: flex;
 }
-.header-main-logo img{
-height: 60px;
+
+.header-main-logo img {
+  height: 60px;
 }
 
-
-.header-main-nav{
+.header-main-nav {
   width: fit-content;
   height: 100%;
   background-color: blue;
 }
 
 .header-main-nav ul {
-  list-style: none;
-}
-.header-main-nav ul li{
-display:  inline;
-float: left;
+  list-style: none; /* Entfernt die Bulletpoints */
+  padding: 0; /* Entfernt den Standard-Innenabstand der UL-Liste */
 }
 
-.header-main-nav ul li a{
+.header-main-nav ul li {
+  display: inline;
+  float: left;
+  margin-right: 10px; /* Abstand zwischen den Listenelementen */
 }
 
-.header-main-sm{
+.header-main-nav ul li a {
+  text-decoration: none; /* Entfernt die unterstrichene Textdekoration */
+  color: #ffffff; /* Ändert die Textfarbe */
+}
+
+.header-main-sm {
   width: 120px;
   height: 100%;
-  background-color: red;}
+  background-color: red;
+}
