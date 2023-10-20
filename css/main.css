@@ -7,8 +7,8 @@
 }
 
 .header-main {
-  position: fixed; /* Feste Position */
-  top: 0; /* Oben am Bildschirm */
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   display: flex;
@@ -31,40 +31,43 @@
 }
 
 .background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: url('../source/image/BackgroundNYC03.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Optional: To fix the background while scrolling */
+  background-attachment: fixed;
   width: 100vw;
-  height: 100vh; /* Set the height to the viewport height */
+  height: 100vh;
   overflow: hidden;
 }
 
 .centered-heading {
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 80px; /* Passen Sie die Schriftgröße nach Bedarf an */
-  color: #fff; /* Textfarbe anpassen */
-  
+  position: relative;
+  z-index: 1;
+  font-size: 80px;
+  color: #fff;
 }
 
 .tile-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px; /* Anpassen Sie den Abstand nach Bedarf */
+  margin-top: 100px;
 }
 
 .tile {
-  flex: 0 0 calc(33.333% - 20px); /* 33.333% für 3 Kacheln nebeneinander */
-  background-color: #f5f4f1; /* Hintergrundfarbe transparent setzen */
-  padding: 20px; /* Anpassen Sie den Abstand nach Bedarf */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Schatten */
-  border-radius: 8px; /* Optional: Abgerundete Ecken */
+  display: flex;
+  flex: 0 0 calc(33.333% - 20px);
+  background-color: #f5f4f1;
+  padding: 20px;
+  margin-right: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   text-align: center;
-  width: 300px;
+  width: 400px;
   height: 300px;
   font-size: 30px;
 }
@@ -88,23 +91,25 @@
   text-decoration: none;
 }
 
-.nav-links li a:before {
-  content: '';
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-link:before {
+  content: "";
   position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
   bottom: 0;
   left: 0;
-  height: 3px;
-  width: 0%;
-  background: #333;
-  border-radius: 12px;
-  transition: all 0.4s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
-.nav-links li a:hover:before {
-  width: 100%;
-}
-
-.nav-links li.center a:before {
-  left: 50%;
-  transform: translateX(-50%);
+.nav-link:hover:before, .nav-link.active:before {
+  transform: scaleX(1);
 }

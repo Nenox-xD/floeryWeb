@@ -1,11 +1,91 @@
-<div id="Stocks">
-    <span class="Symbol">
-      <b class="Stat"><i data-replace='Symbol'>PWR</i>:<i data-replace='StockExchange'>NYSE</i></b>
-      <b class="Label">( <i data-replace='Name'>Quanta Services</i> )</b>
-    </span>
-    <span class="Price"><b class="Label">Last Price</b> <b class="Stat">$<i data-replace='BidRealtime'></i></b></span>
-    <span class="Change"><b class="Label">Change</b> <b class="Stat"><i data-replace='Change'></i></b> <b class="Stat">(<i data-replace='ChangeinPercent'></i>)</b></span>
-    <span class="Volume"><b class="Label">Volume</b> <b class="Stat" data-replace='Volume'></b></span>
-    <span class="MarketCapitalization"><b class="Label">Mkt Cap</b> <b class="Stat">$<i data-replace="MarketCapitalization"></i></b></span>
-    <span class="LastUpdated"><b class="Label">Last Trade</b> <b class="Stat"><i data-replace='LastTradeDate'></i> <i data-replace="LastTradeTime"></i> </b></span>
-  </div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/png" href="../source/image/NenoxLogo.png">
+  </head>
+  <body>
+    <header class="header-main">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="../html/index.html" class="nav-link ">Home</a></li>
+          <li class="center">
+            <a href="../html/portfolio.html" class="nav-link">Portfolio</a>
+          </li>
+          <li class="center">
+            <a href="../html/finances.html" class="nav-link active">Finances</a>
+          </li>
+          <li class="center">
+            <a href="../html/aboutme.html" class="nav-link">About Me</a>
+          </li>
+          <li class="center">
+            <a href="../html/contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-main-logo">
+        <img
+          src="../source/image/NenoxLogo.png"
+          alt="Nenox Logo"
+          width="60px"
+        />
+      </div>
+    </header>
+    <div class="background">
+      <h1 class="centered-heading">My Stocks</h1>
+      <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "dark",
+  "dateRange": "12M",
+  "showChart": true,
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "showFloatingTooltip": true,
+  "width": "1000",
+  "height": "660",
+  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+  "gridLineColor": "rgba(42, 46, 57, 0)",
+  "scaleFontColor": "rgba(134, 137, 147, 1)",
+  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+  "symbolActiveColor": "rgba(255, 0, 0, 0.12)",
+  "tabs": [
+    {
+      "title": "Stocks",
+      "symbols": [
+        {
+          "s": "NYSE:SLG/PI"
+        },
+        {
+          "s": "NASDAQ:TSLA"
+        },
+        {
+          "s": "NASDAQ:NFLX"
+        },
+        {
+          "s": "NYSE:DIS"
+        },
+        {
+          "s": "NASDAQ:PYPL"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+      </div>
+    </div>
+  </body>
+</html>
