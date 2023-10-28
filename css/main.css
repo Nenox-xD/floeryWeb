@@ -7,7 +7,7 @@
 }
 
 .header-main {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -29,11 +29,13 @@
 .header-main-logo {
   display: flex;
   align-items: center;
+  z-index: 20;
 }
 
 .header-main-logo img {
   margin-right: 10px;
   max-height: 60px;
+  z-index: 10;
 }
 
 .login-button {
@@ -115,7 +117,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: 1; /* Stellen Sie sicher, dass es im Hintergrund bleibt (niedriger Wert) */
+  z-index: 5; /* Stellen Sie sicher, dass es im Hintergrund bleibt (niedriger Wert) */
 }
 
 .centered-heading {
