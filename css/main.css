@@ -57,7 +57,7 @@
 .form-popup {
   display: block; /* Damit es sichtbar ist, können Sie es später mit JavaScript steuern */
   position: fixed; /* Sie sollten es in den meisten Fällen auf 'fixed' setzen, um sicherzustellen, dass es immer sichtbar ist */
-  top: 50%; /* Vertikal in der Mitte des Bildschirms */
+  top: 80%; /* Vertikal in der Mitte des Bildschirms */
   left: 50%; /* Horizontal in der Mitte des Bildschirms */
   transform: translate(-50%, -50%); /* Zentriert das Popup */
   border: 3px solid #f1f1f1;
@@ -124,8 +124,8 @@
   display: flex;
   text-align: center;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  top: 50px;
+  left: 50px;
   z-index: 2; /* Stellen Sie sicher, dass es im Hintergrund bleibt (niedriger Wert) */
   font-size: 80px;
   color: #fff;
