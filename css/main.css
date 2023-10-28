@@ -37,6 +37,7 @@
 }
 
 .login-button {
+  position: relative;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -51,15 +52,14 @@
   background-color: #333;
   color: #fff;
 }
-
 .form-popup {
-  display: none;
-  position: fixed;
+  display: block; /* Damit es sichtbar ist, können Sie es später mit JavaScript steuern */
+  position: fixed; /* Sie sollten es in den meisten Fällen auf 'fixed' setzen, um sicherzustellen, dass es immer sichtbar ist */
   top: 50%; /* Vertikal in der Mitte des Bildschirms */
   left: 50%; /* Horizontal in der Mitte des Bildschirms */
   transform: translate(-50%, -50%); /* Zentriert das Popup */
   border: 3px solid #f1f1f1;
-  z-index: 999; /* Stellt sicher, dass es im Vordergrund angezeigt wird */
+  z-index: 999; /* Stellt sicher, dass es im Vordergrund angezeigt wird (erhöhter Wert) */
   max-width: 80%; /* Maximale Breite des Popups */
   background-color: white;
 }
@@ -115,12 +115,16 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  z-index: 1; /* Stellen Sie sicher, dass es im Hintergrund bleibt (niedriger Wert) */
 }
 
 .centered-heading {
+  display: flex;
   text-align: center;
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2; /* Stellen Sie sicher, dass es im Hintergrund bleibt (niedriger Wert) */
   font-size: 80px;
   color: #fff;
 }
@@ -143,6 +147,7 @@
   width: 400px;
   height: 300px;
   font-size: 30px;
+
 }
 
 .nav-links {
