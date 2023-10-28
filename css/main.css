@@ -28,8 +28,6 @@
 
 .header-main-logo {
   display: flex;
-  align-items: center;
-  z-index: 20;
 }
 
 .header-main-logo img {
