@@ -16,9 +16,11 @@
       }
     </script>
   </head>
+
   <body>
 
 
+    
     <header class="header-main">
       <div class="nav-container">
         <ul class="nav-links">
@@ -37,30 +39,41 @@
           </li>
         </ul>
       </div>
+<div style="display: flex; justify-content:center; align-items:center">
 
-      <div class="header-main-login">
-        <a href="#" class="login-button" id="login-button" onclick="openForm()">Login</a>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h1>Login</h1>
-        
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-        
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
-      </div>
+  <div class="header-main-login">
+    <a href="#" class="login-button" id="login-button" onclick="openForm()">Login</a>
+  </div>
+  <div class="header-main-logo">
+    <img
+      src="../source/image/NenoxLogo.png"
+      alt="Nenox Logo"
+      width="60px"
+    />
+  </div>
+</div>
+    
     </header>
 
     <div class="background">
       <div class="centered-heading">
         <h1 >Welcome to Nenox</h1>
       </div>
+    </div>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
     </div>
     
   </body>

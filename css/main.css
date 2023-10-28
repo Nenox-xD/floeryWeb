@@ -53,7 +53,6 @@
   color: #fff;
 }
 .form-popup {
-  display: block; /* Damit es sichtbar ist, können Sie es später mit JavaScript steuern */
   position: fixed; /* Sie sollten es in den meisten Fällen auf 'fixed' setzen, um sicherzustellen, dass es immer sichtbar ist */
   top: 80%; /* Vertikal in der Mitte des Bildschirms */
   left: 50%; /* Horizontal in der Mitte des Bildschirms */
@@ -62,6 +61,7 @@
   z-index: 999; /* Stellt sicher, dass es im Vordergrund angezeigt wird (erhöhter Wert) */
   max-width: 80%; /* Maximale Breite des Popups */
   background-color: white;
+  display: none;
 }
 
 .form-container {
