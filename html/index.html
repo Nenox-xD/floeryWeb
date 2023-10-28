@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <title>Flori killt es einfach</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/popup.css" /> 
     <link rel="icon" type="image/png" href="../source/image/NenoxLogo.png">
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
   </head>
   <body>
     <header class="header-main">
@@ -15,7 +25,7 @@
             <a href="../html/portfolio.html" class="nav-link">Portfolio</a>
           </li>
           <li class="center">
-            <a href="../html/finances.html" class="nav-link">Finances</a>
+            <a href="../html/finances.html" class "nav-link">Finances</a>
           </li>
           <li class="center">
             <a href="../html/aboutme.html" class="nav-link">About Me</a>
@@ -25,35 +35,45 @@
           </li>
         </ul>
       </div>
-      <div class="header-main-logo">
-        <img
-          src="../source/image/NenoxLogo.png"
-          alt="Nenox Logo"
-          width="60px"
-        />
+
+      <div class="header-main-login">
+        <a href="#" class="login-button" id="login-button" onclick="openForm()">Login</a>
+      </div>
+      
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login</h1>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
       </div>
     </header>
+    
     <div class="background">
       <h1 class="centered-heading">Welcome to Nenox Ltd</h1>
       <div class="tile-container">
-
         <div class="tile-container-portfolio">
           <a href="../html/portfolio.html" class="nav-link">
             <div class="tile">Portfolio</div>
           </a>
         </div>
-
         <div class="tile-container-Finances">
           <a href="../html/finances.html" class="nav-link">
             <div class="tile">Finances</div>
           </a>
         </div>
-
         <div class="tile-container-AboutMe">
           <a href="../html/aboutme.html" class="nav-link">
             <div class="tile">About Me</div>
           </a>
-        </div>       
+        </div>
       </div>
     </div>
   </body>
